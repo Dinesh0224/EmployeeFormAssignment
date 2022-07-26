@@ -1,6 +1,4 @@
 package com.empform.model;
-import java.sql.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,19 +15,20 @@ public class EmployeeFormDetails {
 	
 	private String employeeName;
 	private String employeeID;
-	private String bankName;
+	private String placeName;
+	private int age;
 	public EmployeeFormDetails()
 	{
 		
 	}
 	
-	public EmployeeFormDetails(int disputeId, String employeeName, String employeeID, String bankName) 
+	public EmployeeFormDetails(int disputeId, String employeeName, String employeeID, String placeName) 
 	{
 		super();
 		this.disputeId = disputeId;
 		this.employeeName = employeeName;
 		this.employeeID = employeeID;
-		this.bankName = bankName;
+		this.placeName = placeName;
 	}
 	
 	public  int getDisputeId() {
@@ -54,12 +53,22 @@ public class EmployeeFormDetails {
 		this.employeeID = employeeID;
 	}
 
-	public String getBankName() {
-		return bankName;
+	public String getPlaceName() {
+		return placeName;
 	}
 
-	public void setBankName(String bankName) {
-		this.bankName = bankName;
+	public int getAge() {
+		return age;
 	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void setPlaceName(String placeName) {
+		this.placeName = placeName;
+	}
+
+
 
 }

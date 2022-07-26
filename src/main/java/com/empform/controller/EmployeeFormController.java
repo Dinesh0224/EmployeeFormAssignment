@@ -31,11 +31,12 @@ public class EmployeeFormController {
 		list = (ArrayList<EmployeeFormDetails>) empRegistrationDetailsService.findAllEmployeeDetails();
 		File file = new File("C:\\Users\\dineshv\\eclipse-workspace\\Employee_Form\\Employee Report.csv");
 		BufferedWriter w = new BufferedWriter(new FileWriter(file));
-		w.write("Emp_Name,Emp_ID,Bank_Name");
+		w.write("Emp_Name,Emp_ID,Age,Place_Name");
 		w.newLine();
 
 		for (EmployeeFormDetails empreport : list) {
-			w.write(empreport.getEmployeeName() + "," + empreport.getEmployeeID() + "," + empreport.getBankName()
+			w.write(empreport.getEmployeeName() + "," + empreport.getEmployeeID() + "," + empreport.getAge() + ","
+		+ empreport.getPlaceName()
 					+ ",");
 			w.newLine();
 		}

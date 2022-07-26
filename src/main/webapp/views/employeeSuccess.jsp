@@ -13,7 +13,6 @@
 		<br>
 		<p>Employee form has been submitted successfully!</p>
 		<br>
-		<br>
 		<p><a href="/views/home.jsp">Go to Home</a></p>
 	</body> 
 </html>
