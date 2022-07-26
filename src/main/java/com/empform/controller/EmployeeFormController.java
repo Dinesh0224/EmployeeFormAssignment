@@ -25,10 +25,10 @@ public class EmployeeFormController {
 	public ModelAndView addDisputeCustomerDetails(EmployeeFormDetails employeeRegDetails) throws IOException {
 		ModelAndView modelAndView = new ModelAndView("employeeSuccess");
 		EmployeeFormDetails addedDisputeCustomerDetails = empRegistrationDetailsService
-				.createDisputeCustomerDetails(employeeRegDetails);
+				.createEmployeeDetails(employeeRegDetails);
 		modelAndView.addObject("employeeRegDetails", addedDisputeCustomerDetails);
 		ArrayList<EmployeeFormDetails> list = new ArrayList<EmployeeFormDetails>();
-		list = (ArrayList<EmployeeFormDetails>) empRegistrationDetailsService.findAllDisputeCustomerDetails();
+		list = (ArrayList<EmployeeFormDetails>) empRegistrationDetailsService.findAllEmployeeDetails();
 		File file = new File("C:\\Users\\dineshv\\eclipse-workspace\\Employee_Form\\Employee Report.csv");
 		BufferedWriter w = new BufferedWriter(new FileWriter(file));
 		w.write("Emp_Name,Emp_ID,Bank_Name");

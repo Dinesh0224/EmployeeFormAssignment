@@ -6,9 +6,9 @@ import com.empform.model.EmployeeFormDetails;
 
 public interface EmployeeFormDetailsService {
 
-	EmployeeFormDetails createDisputeCustomerDetails(EmployeeFormDetails employeeRegDetails);
-	EmployeeFormDetails findDisputeCustomerDetailsById(int disputeId);
-	List<EmployeeFormDetails> findAllDisputeCustomerDetails();
-	EmployeeFormDetails updateDisputeCustomerDetails(EmployeeFormDetails employeeRegDetails);
-	void deleteDisputeCustomerDetails(int disputeId);
+	EmployeeFormDetails createEmployeeDetails(EmployeeFormDetails employeeRegDetails);
+	EmployeeFormDetails findEmployeeDetailsById(int disputeId);
+	List<EmployeeFormDetails> findAllEmployeeDetails();
+	EmployeeFormDetails updateEmployeeDetails(EmployeeFormDetails employeeRegDetails);
+	void deleteEmployeeDetails(int disputeId);
 }

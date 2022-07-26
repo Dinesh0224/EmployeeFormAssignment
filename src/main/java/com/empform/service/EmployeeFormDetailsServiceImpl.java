@@ -15,22 +15,22 @@ public class EmployeeFormDetailsServiceImpl implements EmployeeFormDetailsServic
 	EmployeeFormDetailsRepository employeeRegDetailsRepo;
 
 	@Override
-	public EmployeeFormDetails createDisputeCustomerDetails(EmployeeFormDetails employeeRegDetails) {
+	public EmployeeFormDetails createEmployeeDetails(EmployeeFormDetails employeeRegDetails) {
 		return employeeRegDetailsRepo.save(employeeRegDetails);
 	}
 
 	@Override
-	public EmployeeFormDetails findDisputeCustomerDetailsById(int disputeId) {
+	public EmployeeFormDetails findEmployeeDetailsById(int disputeId) {
 		return employeeRegDetailsRepo.findById(disputeId).orElse(null);
 	}
 
 	@Override
-	public List<EmployeeFormDetails> findAllDisputeCustomerDetails() {
+	public List<EmployeeFormDetails> findAllEmployeeDetails() {
 		return employeeRegDetailsRepo.findAll();
 	}
 
 	@Override
-	public EmployeeFormDetails updateDisputeCustomerDetails(EmployeeFormDetails employeeRegDetails) {
+	public EmployeeFormDetails updateEmployeeDetails(EmployeeFormDetails employeeRegDetails) {
 		EmployeeFormDetails updatedDisputeCustomerDetails=  null;
 		int disputeCustomerId = employeeRegDetails.getDisputeId();
 	
@@ -43,7 +43,7 @@ public class EmployeeFormDetailsServiceImpl implements EmployeeFormDetailsServic
 	}
 
 	@Override
-	public void deleteDisputeCustomerDetails(int disputeId) {
+	public void deleteEmployeeDetails(int disputeId) {
 		EmployeeFormDetails employeeRegDetailsToBeDeleted = employeeRegDetailsRepo.findById(disputeId).orElse(null);
 		if(employeeRegDetailsToBeDeleted != null) {
 			employeeRegDetailsRepo.deleteById(disputeId);
